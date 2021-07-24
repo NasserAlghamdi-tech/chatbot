@@ -1,0 +1,392 @@
+body{
+    height: 100vh;
+    
+    background-image: url("brain-6111125.png");
+    background-size: cover;
+}
+
+.HeadLine{
+  position: absolute;
+  left: 30%;
+  top: 4%;
+  font-size: 700%;
+  font-family: 'Courgette', cursive;
+  color: aquamarine;
+  text-shadow: 5px 5px 5px rgb(0, 0, 0);
+}
+
+#seeThro{
+    position: absolute;
+    top: 25%;
+    right: 15%;
+    height: 70%;
+    width: 70%;
+    background-image: image-set("SeeThroBackGround.jpg");
+    background-color: rgba(255, 255, 255, 0.801);
+    box-shadow: 0px 0px 5px 5px rgb(140, 168, 247);
+    border-radius: 2rem;
+    opacity: 100%;
+}
+
+#firstShifter{
+    width: 85%;
+    position: relative;
+    left: 0.5rem; 
+    border-radius: 2rem;
+    -webkit-appearance: none;
+    background: aquamarine;
+}
+
+.FirstRound{
+  height: 30%;
+  width: 30%;
+}
+
+#firstShifter::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 20px; /* Set a specific slider handle width */
+    height: 15px; /* Slider handle height */
+    border-radius: 2rem;
+    background: black; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+
+  #ValueOfAngle{
+    position: relative;
+    left: 1rem;
+    bottom: 0.2rem;
+  }
+
+  #SecondShifter{
+    width: 85%;
+    position: relative;
+    left: 0.5rem; 
+    border-radius: 2rem;
+    -webkit-appearance: none;
+    background: aquamarine;
+}
+
+#SecondShifter::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 20px; /* Set a specific slider handle width */
+    height: 15px; /* Slider handle height */
+    border-radius: 2rem;
+    background: black; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+
+  #ValueOfAngle2{
+    position: relative;
+    left: 1rem;
+    bottom: 0.2rem;
+  }
+
+  #ThirdShifter{
+    width: 85%;
+    position: relative;
+    left: 0.5rem; 
+    border-radius: 2rem;
+    -webkit-appearance: none;
+    background:aquamarine;
+}
+
+#ThirdShifter::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 20px; /* Set a specific slider handle width */
+    height: 15px; /* Slider handle height */
+    border-radius: 2rem;
+    background: black; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+
+  #ValueOfAngle3{
+    position: relative;
+    left: 1rem;
+    bottom: 0.2rem;
+  }
+
+  #ForthShifter{
+    width: 85%;
+    position: relative;
+    left: 0.5rem; 
+    border-radius: 2rem;
+    -webkit-appearance: none;
+    background: aquamarine;
+}
+
+#ForthShifter::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 20px; /* Set a specific slider handle width */
+    height: 15px; /* Slider handle height */
+    border-radius: 2rem;
+    background: black; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+
+  #ValueOfAngle4{
+    position: relative;
+    left: 1rem;
+    bottom: 0.2rem;
+  }
+
+  #FifthShifter{
+    width: 85%;
+    position: relative;
+    left: 0.5rem; 
+    border-radius: 2rem;
+    -webkit-appearance: none;
+    background: aquamarine;
+}
+
+#FifthShifter::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 20px; /* Set a specific slider handle width */
+    height: 15px; /* Slider handle height */
+    border-radius: 2rem;
+    background: black; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+
+  #ValueOfAngle5{
+    position: relative;
+    left: 1rem;
+    bottom: 0.2rem;
+  }
+
+  #SixthShifter{
+    width: 85%;
+    position: relative;
+    left: 0.5rem; 
+    border-radius: 2rem;
+    -webkit-appearance: none;
+    background: aquamarine;
+}
+
+#SixthShifter::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 20px; /* Set a specific slider handle width */
+    height: 15px; /* Slider handle height */
+    border-radius: 2rem;
+    background: black; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+
+  #ValueOfAngle6{
+    position: relative;
+    left: 1rem;
+    bottom: 0.2rem;
+  }
+
+  #SaveButton{
+    position: relative;
+    left: 30%;
+    border-radius: 50%;
+    border: none;
+    height: 7rem;
+    width: 7rem;
+    box-shadow: 5px 5px 5px rgb(2, 2, 2);
+    background-color:  rgb(241, 85, 85);
+  }
+
+  #RunButton{
+    position: relative;
+    left: 50%;
+    border-radius: 50%;
+    border: none;
+    height: 7rem;
+    width: 7rem;
+    box-shadow: 5px 5px 5px rgb(2, 2, 2);
+    background-color:  rgb(241, 85, 85);
+  }
+
+
+.armButton{
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 70%;
+  border: none;
+  height: 7rem;
+  width: 7rem;
+  box-shadow: 0px 0px 5px 5px rgb(0, 0, 0);
+  background-color:  rgb(241, 85, 85);
+}
+
+.ArmClass{
+  height: 95%;
+}
+
+.baseButton{
+  background-color: white;
+  border-radius: 50%;
+  opacity: 70%;
+  border: none;
+  height: 7rem;
+  width: 7rem;
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  box-shadow: 0px 0px 5px 5px rgb(0, 0, 0);
+  background-color:  rgb(241, 85, 85);
+}
+
+.BaseClass{
+height: 100%;
+padding-top: 3rem;
+}
+
+.UpButton{
+ position: relative;
+ left: 42%;
+ background-color:aquamarine;
+ color: rgb(0, 0, 0);
+ border: none;
+ border-radius: 50%;
+ height: 9rem;
+ width: 9rem;
+ font-family:cursive ;
+ font-size: 150%;
+ box-shadow: 5px 5px 5px rgb(2, 2, 2);
+}
+
+.UpButton:hover .ForWardImg{
+  animation: ForWardSlide 1.5s linear infinite;
+  }
+  
+  @keyframes ForWardSlide {
+    100% {
+      transform: translateY(-20%);
+    }
+    0% {
+      transform: translateY(20%);
+    }
+  }
+
+.DownButton{
+  position: relative;
+  left: 42%;
+  background-color:aquamarine;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 50%;
+  height: 9rem;
+  width: 9rem;
+  font-family:cursive ;
+  font-size: 150%;
+  box-shadow: 5px 5px 5px rgb(2, 2, 2);
+ }
+
+ .DownButton:hover .BackWardImg{
+  animation: BackWardSlide 1.5s linear infinite;
+  }
+  
+  @keyframes BackWardSlide {
+    100% {
+      transform: translateY(20%);
+    }
+    0% {
+      transform: translateY(-20%);
+    }
+  }
+
+ .StopButton{
+  position: relative;
+  left: 25%;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 50%;
+  height: 9rem;
+  width: 9rem;
+  font-family:cursive ;
+  font-size: 150%;
+  box-shadow: 5px 5px 5px rgb(2, 2, 2);
+  background-color:  rgb(241, 85, 85);
+  opacity: 100%;
+ }
+
+ .RightButton{
+  position: relative;
+  left: 0%;
+  background-color: aquamarine;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 50%;
+  height: 9rem;
+  width: 9rem;
+  box-shadow: 5px 5px 5px rgb(2, 2, 2);
+  font-family:cursive ;
+  font-size: 150%;
+ }
+
+.RightButton:hover .RightImg{
+animation: RightSlide 1.5s linear infinite;
+}
+
+@keyframes RightSlide {
+  100% {
+    transform: translateX(20%);
+  }
+  0% {
+    transform: translateX(-20%);
+  }
+}
+
+ .LeftButton{
+  position: relative;
+  left: 50%;
+  background-color:aquamarine;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 50%;
+  height: 9rem;
+  width: 9rem;
+  font-family:cursive ;
+  font-size: 150%;
+  box-shadow: 5px 5px 5px rgb(2, 2, 2);
+ }
+
+ .LeftButton:hover .LeftImg{
+  animation: LeftSlide 1.5s linear infinite;
+  }
+  
+  @keyframes LeftSlide {
+    100% {
+      transform: translateX(-20%);
+    }
+    0% {
+      transform: translateX(20%);
+    }
+  }
+
+  .BaseSave{
+    position: relative;
+    bottom: 20%;
+    left: 30%;
+    border-radius: 50%;
+    border: none;
+    height: 7rem;
+    width: 7rem;
+    box-shadow: 5px 5px 5px rgb(2, 2, 2);
+    background-color:  rgb(241, 85, 85);
+  }
+
+  .BaseRun{
+    position: relative;
+    bottom: 20%;
+    left: 50%;
+    border-radius: 50%;
+    border: none;
+    height: 7rem;
+    width: 7rem;
+    box-shadow: 5px 5px 5px rgb(2, 2, 2);
+    background-color:  rgb(241, 85, 85);
+  }
+

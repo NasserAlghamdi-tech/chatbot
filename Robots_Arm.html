@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Arm_Style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/round-slider@1.6.1/dist/roundslider.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/round-slider@1.6.1/dist/roundslider.min.js"></script> 
+</head>
+<body>
+
+    <div class="SmartMethods">
+        <h1 class="HeadLine">Smart Methods</h1>
+    </div>
+
+
+    <div class="row">
+        <div class="col-sm-6 ArmDiv">
+        <button class=" armButton">
+            <img src="robot-arm.png" alt="" height="90rem" width="90rem">
+        </button>
+        <script>
+           $(".armButton").click(function(){
+               $(".BaseClass").hide();
+               $(".ArmClass").show();
+           });
+        </script>
+        </div>
+
+        <div class="col-sm-6 BaseDiv">
+        <button class="baseButton" >
+            <img src="base.png" alt="" height="70rem" width="70rem">
+        </button>
+        <script>
+            $(document).ready(function(){
+                $(".ArmClass").hide();
+            $(".baseButton").click(function(){
+                $(".ArmClass").hide();
+                $(".BaseClass").show();
+            });
+        });
+         </script>
+         </div>
+
+    </div>
+
+
+<form class="contanier" id="seeThro" action="RobotArm.php" method="POST">
+    
+    <div class="row ArmClass">
+        <div id="FirstRound" class="col-sm-4">
+            <h3>First shifter:</h3>
+            <input id="firstShifter" type="range" min="1" max="180" value="0" name="Slider1">
+            <span id="ValueOfAngle">0</span>
+            <script>
+            var Firstslider = document.getElementById("firstShifter");
+            var Firstoutput = document.getElementById("ValueOfAngle");
+            Firstoutput.innerHTML = Firstslider.value;
+            
+            Firstslider.oninput = function() {
+            Firstoutput.innerHTML = this.value;
+            }
+            </script>
+        </div>
+
+        <script>
+            $("#FirstRound").roundSlider({
+            min: 0,
+            max: 180,
+            step: 1,
+            value: null,
+            radius: 85,
+            width: 16,
+            handleSize: "+0",
+            startAngle: 0,
+            endAngle: "+360",
+            animation: true,
+            showTooltip: true,
+            editableTooltip: true,
+            readOnly: false,
+            disabled: false,
+            keyboardAction: true,
+            mouseScrollAction: false,
+            sliderType: "default",
+            circleShape: "full",
+            handleShape: "round",
+            lineCap: "butt",
+
+            // the 'startValue' property decides at which point the slider should start.
+            // otherwise, by default the slider starts with min value. this is mainly used
+            // for min-range slider, where you can customize the min-range start position.
+            startValue: null,
+
+            // SVG related properties
+            svgMode: true,
+            borderWidth: 1,
+            borderColor: "White",
+            pathColor: "aquamarine",
+            rangeColor: "rgb(255,255,255)",
+            tooltipColor: "rgb(0,0,0)",
+
+            // events
+            beforeCreate: null,
+            create: null,
+            start: null,
+            // 'beforeValueChange' will be triggered before 'valueChange', and it can be cancellable
+            beforeValueChange: null,
+            drag: null,
+            change: null,
+            // 'update' event is the combination of 'drag' and 'change'
+            update: null,
+            // 'valueChange' event is similar to 'update' event, in addition it will trigger
+            // even the value was changed through programmatically also.
+            valueChange: null,
+            stop: null,
+            tooltipFormat: null
+        });
+        </script>
+
+        <div id="SecondRound" class="col-sm-4">
+            <h3>Second shifter:</h3>
+            <input id="SecondShifter" type="range" min="1" max="180" value="0" name="Slider2">
+            <span id="ValueOfAngle2">0</span>
+            <script>
+            var secondSlider = document.getElementById("SecondShifter");
+            var secondOutput = document.getElementById("ValueOfAngle2");
+            secondOutput.innerHTML = secondSlider.value;
+            
+            secondSlider.oninput = function() {
+                secondOutput.innerHTML = this.value;
+            }
+            </script>
+        </div>
+
+        <script>
+            $("#SecondRound").roundSlider({
+            min: 0,
+            max: 180,
+            step: 1,
+            value: null,
+            radius: 85,
+            width: 16,
+            handleSize: "+0",
+            startAngle: 0,
+            endAngle: "+360",
+            animation: true,
+            showTooltip: true,
+            editableTooltip: true,
+            readOnly: false,
+            disabled: false,
+            keyboardAction: true,
+            mouseScrollAction: false,
+            sliderType: "default",
+            circleShape: "full",
+            handleShape: "round",
+            lineCap: "butt",
+
+            // the 'startValue' property decides at which point the slider should start.
+            // otherwise, by default the slider starts with min value. this is mainly used
+            // for min-range slider, where you can customize the min-range start position.
+            startValue: null,
+
+            // SVG related properties
+            svgMode: true,
+            borderWidth: 1,
+            borderColor: "White",
+            pathColor: "aquamarine",
+            rangeColor: "rgb(255,255,255)",
+            tooltipColor: "rgb(0,0,0)",
+
+            // events
+            beforeCreate: null,
+            create: null,
+            start: null,
+            // 'beforeValueChange' will be triggered before 'valueChange', and it can be cancellable
+            beforeValueChange: null,
+            drag: null,
+            change: null,
+            // 'update' event is the combination of 'drag' and 'change'
+            update: null,
+            // 'valueChange' event is similar to 'update' event, in addition it will trigger
+            // even the value was changed through programmatically also.
+            valueChange: null,
+            stop: null,
+            tooltipFormat: null
+        });
+        </script>
+
+        <div id="ThirdRound" class="col-sm-4">
+            <h3>Third shifter:</h3>
+            <input id="ThirdShifter" type="range" min="1" max="180" value="0" name="Slider3">
+            <span id="ValueOfAngle3">0</span>
+            <script>
+            var ThirdSlider = document.getElementById("ThirdShifter");
+            var ThirdOutput = document.getElementById("ValueOfAngle3");
+            ThirdOutput.innerHTML = ThirdSlider.value;
+            
+            ThirdSlider.oninput = function() {
+                ThirdOutput.innerHTML = this.value;
+            }
+            </script>
+        </div>
+
+        <Script>
+            $("#ThirdRound").roundSlider({
+            min: 0,
+            max: 180,
+            step: 1,
+            value: null,
+            radius: 85,
+            width: 16,
+            handleSize: "+0",
+            startAngle: 0,
+            endAngle: "+360",
+            animation: true,
+            showTooltip: true,
+            editableTooltip: true,
+            readOnly: false,
+            disabled: false,
+            keyboardAction: true,
+            mouseScrollAction: false,
+            sliderType: "default",
+            circleShape: "full",
+            handleShape: "round",
+            lineCap: "butt",
+
+            // the 'startValue' property decides at which point the slider should start.
+            // otherwise, by default the slider starts with min value. this is mainly used
+            // for min-range slider, where you can customize the min-range start position.
+            startValue: null,
+
+            // SVG related properties
+            svgMode: true,
+            borderWidth: 1,
+            borderColor: "White",
+            pathColor: "aquamarine",
+            rangeColor: "rgb(255,255,255)",
+            tooltipColor: "rgb(0,0,0)",
+
+            // events
+            beforeCreate: null,
+            create: null,
+            start: null,
+            // 'beforeValueChange' will be triggered before 'valueChange', and it can be cancellable
+            beforeValueChange: null,
+            drag: null,
+            change: null,
+            // 'update' event is the combination of 'drag' and 'change'
+            update: null,
+            // 'valueChange' event is similar to 'update' event, in addition it will trigger
+            // even the value was changed through programmatically also.
+            valueChange: null,
+            stop: null,
+            tooltipFormat: null
+        });
+        </Script>
+
+        <div id="FourthRound" class="col-sm-4">
+            <h3>Forth shifter:</h3>
+            <input id="ForthShifter" type="range" min="1" max="180" value="0" name="Slider4">
+            <span id="ValueOfAngle4">0</span>
+            <script>
+            var ForthSlider = document.getElementById("ForthShifter");
+            var ForthOutput = document.getElementById("ValueOfAngle4");
+            ForthOutput.innerHTML = ForthSlider.value;
+            
+            ForthSlider.oninput = function() {
+            ForthOutput.innerHTML = this.value;
+            }
+            </script>
+        </div>
+
+        <script>
+            $("#FourthRound").roundSlider({
+            min: 0,
+            max: 180,
+            step: 1,
+            value: null,
+            radius: 85,
+            width: 16,
+            handleSize: "+0",
+            startAngle: 0,
+            endAngle: "+360",
+            animation: true,
+            showTooltip: true,
+            editableTooltip: true,
+            readOnly: false,
+            disabled: false,
+            keyboardAction: true,
+            mouseScrollAction: false,
+            sliderType: "default",
+            circleShape: "full",
+            handleShape: "round",
+            lineCap: "butt",
+
+            // the 'startValue' property decides at which point the slider should start.
+            // otherwise, by default the slider starts with min value. this is mainly used
+            // for min-range slider, where you can customize the min-range start position.
+            startValue: null,
+
+            // SVG related properties
+            svgMode: true,
+            borderWidth: 1,
+            borderColor: "White",
+            pathColor: "aquamarine",
+            rangeColor: "rgb(255,255,255)",
+            tooltipColor: "rgb(0,0,0)",
+
+            // events
+            beforeCreate: null,
+            create: null,
+            start: null,
+            // 'beforeValueChange' will be triggered before 'valueChange', and it can be cancellable
+            beforeValueChange: null,
+            drag: null,
+            change: null,
+            // 'update' event is the combination of 'drag' and 'change'
+            update: null,
+            // 'valueChange' event is similar to 'update' event, in addition it will trigger
+            // even the value was changed through programmatically also.
+            valueChange: null,
+            stop: null,
+            tooltipFormat: null
+        });
+        </script>
+
+        <div id="FifthRound" class="col-sm-4">
+            <h3>Fifth shifter:</h3>
+            <input id="FifthShifter" type="range" min="1" max="180" value="0" name="Slider5">
+            <span id="ValueOfAngle5">0</span>
+            <script>
+            var FifthSlider = document.getElementById("FifthShifter");
+            var FifthOutput = document.getElementById("ValueOfAngle5");
+            FifthOutput.innerHTML = FifthSlider.value;
+            
+            FifthSlider.oninput = function() {
+            FifthOutput.innerHTML = this.value;
+            }
+            </script>
+        </div>
+
+        <script>
+            $("#FifthRound").roundSlider({
+            min: 0,
+            max: 180,
+            step: 1,
+            value: null,
+            radius: 85,
+            width: 16,
+            handleSize: "+0",
+            startAngle: 0,
+            endAngle: "+360",
+            animation: true,
+            showTooltip: true,
+            editableTooltip: true,
+            readOnly: false,
+            disabled: false,
+            keyboardAction: true,
+            mouseScrollAction: false,
+            sliderType: "default",
+            circleShape: "full",
+            handleShape: "round",
+            lineCap: "butt",
+
+            // the 'startValue' property decides at which point the slider should start.
+            // otherwise, by default the slider starts with min value. this is mainly used
+            // for min-range slider, where you can customize the min-range start position.
+            startValue: null,
+
+            // SVG related properties
+            svgMode: true,
+            borderWidth: 1,
+            borderColor: "White",
+            pathColor: "aquamarine",
+            rangeColor: "rgb(255,255,255)",
+            tooltipColor: "rgb(0,0,0)",
+
+            // events
+            beforeCreate: null,
+            create: null,
+            start: null,
+            // 'beforeValueChange' will be triggered before 'valueChange', and it can be cancellable
+            beforeValueChange: null,
+            drag: null,
+            change: null,
+            // 'update' event is the combination of 'drag' and 'change'
+            update: null,
+            // 'valueChange' event is similar to 'update' event, in addition it will trigger
+            // even the value was changed through programmatically also.
+            valueChange: null,
+            stop: null,
+            tooltipFormat: null
+        });
+        </script>
+
+        <div id="SixthRound" class="col-sm-4">
+            <h3>Sixth shifter:</h3>
+            <input id="SixthShifter" type="range" min="1" max="180" value="0" name="Slider6">
+            <span id="ValueOfAngle6">0</span>
+            <script>
+            var SixthSlider = document.getElementById("SixthShifter");
+            var SixthOutput = document.getElementById("ValueOfAngle6");
+            SixthOutput.innerHTML = SixthSlider.value;
+            
+            SixthSlider.oninput = function() {
+            SixthOutput.innerHTML = this.value;
+            }
+            </script>
+        </div>
+
+        <script>
+            $("#SixthRound").roundSlider({
+            min: 0,
+            max: 180,
+            step: 1,
+            value: null,
+            radius: 85,
+            width: 16,
+            handleSize: "+0",
+            startAngle: 0,
+            endAngle: "+360",
+            animation: true,
+            showTooltip: true,
+            editableTooltip: true,
+            readOnly: false,
+            disabled: false,
+            keyboardAction: true,
+            mouseScrollAction: false,
+            sliderType: "default",
+            circleShape: "full",
+            handleShape: "round",
+            lineCap: "butt",
+
+            // the 'startValue' property decides at which point the slider should start.
+            // otherwise, by default the slider starts with min value. this is mainly used
+            // for min-range slider, where you can customize the min-range start position.
+            startValue: null,
+
+            // SVG related properties
+            svgMode: true,
+            borderWidth: 1,
+            borderColor: "White",
+            pathColor: "aquamarine",
+            rangeColor: "rgb(255,255,255)",
+            tooltipColor: "rgb(0,0,0)",
+
+            // events
+            beforeCreate: null,
+            create: null,
+            start: null,
+            // 'beforeValueChange' will be triggered before 'valueChange', and it can be cancellable
+            beforeValueChange: null,
+            drag: null,
+            change: null,
+            // 'update' event is the combination of 'drag' and 'change'
+            update: null,
+            // 'valueChange' event is similar to 'update' event, in addition it will trigger
+            // even the value was changed through programmatically also.
+            valueChange: null,
+            stop: null,
+            tooltipFormat: null
+        });
+        </script>
+
+        <div  class="col-sm-12">
+            <button id="SaveButton">
+                <img src="diskette.png" alt="" height="60rem" width="60rem">
+            </button>
+            <button id="RunButton" onclick="ChangeRun()">
+                <img src="start-line.png" alt="" height="60rem" width="60rem">
+            </button>
+            <input type="text" value="0" name="RunKey" id="RunValue" hidden>
+            <script>
+                function ChangeRun() {
+                var runValue = document.getElementById("RunValue");
+                if(runValue = 0){
+                    runValue.innerHTML = "1";
+                }else{
+                    runValue.innerHTML = "0";
+                }}
+
+            </script>
+        </div>
+    </div>
+
+
+    <div class="row BaseClass">
+       <div class="col-sm-12 MoveUp">
+            <button type="button" name="ForWard" class="UpButton">
+             <img src="up-arrow.png" alt="Forward" class="ForWardImg" height="100rem" width="100rem">
+            </button>
+       </div>
+
+        <div class="col-sm-4 MoveRight">
+            <button type="button" name="LeftSide" class="LeftButton">
+                <img src="Left-arrow.png" alt="Left" class="LeftImg" height="100rem" width="100rem">
+            </button>
+            <p class="rightText" hidden>l</p>
+            <script>
+                $(".LeftButton").click(function(){
+                  $(".rightText").text();
+                });
+            </script>   
+        </div>
+
+        <div class="col-sm-4 Stop">
+            <button type="button" name="Stop" class="StopButton" value="Stop">
+                <img src="stop.png" alt="pause" class="StopImg" height="100rem" width="100rem">
+            </button>
+        </div>
+
+        <div class="col-sm-4 MoveLeft">
+            <button type="button" name="RightSide" class="RightButton">
+                <img src="Right-arrow.png" alt="Right" class="RightImg" height="100rem" width="100rem">
+            </button>
+        </div>
+
+        <div class="col-sm-12 MoveDown">
+            <button type="button" name="BackWard" class="DownButton" value="BackWard">
+                <img src="Down-arrow.png" alt="BackWard" class="BackWardImg" height="100rem" width="100rem">
+            </button>
+        </div>
+
+    </div>
+
+    
+    
+</form>
+    
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" 
+integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" 
+integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+<script>
+    window.watsonAssistantChatOptions = {
+        integrationID: "59c5657c-7ebd-4532-9fa6-d499b0766940", // The ID of this integration.
+        region: "eu-gb", // The region your integration is hosted in.
+        serviceInstanceID: "ef6c1569-6e47-40a7-bef4-eedc9868cce6", // The ID of your service instance.
+        onLoad: function(instance) { instance.render(); }
+      };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+      document.head.appendChild(t);
+    });
+  </script>
+  
+</body>
+</html>
